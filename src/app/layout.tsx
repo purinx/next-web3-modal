@@ -1,3 +1,4 @@
+import { Web3ModalProvider } from 'libs/web3Modal';
 import './globals.css';
 
 export const metadata = {
@@ -11,8 +12,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <Web3ModalProvider>
+      <html lang="en">
+        <body>{children}</body>
+      </html>
+    </Web3ModalProvider>
   );
 }

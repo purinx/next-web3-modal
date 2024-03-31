@@ -1,3 +1,5 @@
+'use client';
+
 import { createWeb3Modal } from '@web3modal/wagmi/react';
 import { defaultWagmiConfig } from '@web3modal/wagmi/react/config';
 
@@ -8,12 +10,12 @@ import { PropsWithChildren } from 'react';
 
 const queryClient = new QueryClient();
 
-const projectId = 'YOUR_PROJECT_ID';
+const projectId = process.env.NEXT_PUBLIC_PROJECT_ID!;
 
 const metadata = {
   name: 'Web3Modal',
-  description: 'Web3Modal Example',
-  url: 'https://web3modal.com', // origin must match your domain & subdomain
+  description: 'DJT Sample',
+  url: 'http://localhost', // origin must match your domain & subdomain
   icons: ['https://avatars.githubusercontent.com/u/37784886'],
 };
 
