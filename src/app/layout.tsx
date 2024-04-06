@@ -1,5 +1,5 @@
 import { Web3ModalProvider } from 'libs/web3Modal';
-import './globals.css';
+import 'libs/styles/global.css';
 
 export const metadata = {
   title: 'Create Next App',
